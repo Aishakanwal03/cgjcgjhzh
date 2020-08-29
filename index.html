@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Page Name</title>
+</head>
+
+<body>
+    <!-- code for image slider with next and previous arrow and dots -->
+
+    <!-- Slider main container -->
+    <div style="background-color: rgb(231, 231, 231); ">
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="images/1.png" width="100%" alt=""></div>
+                <div class="swiper-slide"><img src="images/2.png" width="100%" alt=""></div>
+                <div class="swiper-slide"><img src="images/3.png" width="100%" alt=""></div>
+                <div class="swiper-slide"><img src="images/4.png" width="100%" alt=""></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev" id="prev-arrow"></div>
+            <div class="swiper-button-next" id="next-arrow"></div>
+        </div>
+    </div>
+
+
+    <!-- title, introduction, price and button container -->
+
+    <div class="container mx-auto bg-white col-md-8 col-sm-12 offset-md-3">
+
+        <!-- code for title -->
+        <h2 class="text-center pt-5">Your product title here</h2>
+
+        <!-- code for introdution -->
+        <p class="text-center mt-3 px-3">
+            your product introduction shuold be here. Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Iste, cupiditate! Nulla quidem a doloribus omnis velit nihil officiis, earum autem. Quae
+            beatae dolores voluptatem molestiae similique ex nulla dolore repellendus?.湖南人,定居广州，自评几点： 1.
+            近20年的软件研发职业生涯，熟练大型软件项目及产品的研发流程； 2. 归零心态，善于学习，喜欢创新,不断的学习新技术新业务； 3. 近十年专注云计算，大数据，区块链及人工智能的技术；
+            4.担任云计算架构师期间负责过多个云计算产
+        </p>
+
+        <!-- code for price and button -->
+
+        <div class="price col-sm-8">
+            <h3>Price: $50 only</h3>
+            <button class="btn my-4 col-md-12 col-sm-12"><a href="#" target="_blank">Buy Now</a></button>
+        </div>
+    </div>
+
+    <!-- code for social media icions -->
+
+    <div class="links text-center py-5 text-white">
+        <h4 class="pb-2">Follow us on Social Media</h4>
+        
+        <a href="#" target="_blank" class="fa fa-twitter"></a>
+        <a href="#" target="_blank" class="fa fa-linkedin"></a>
+        <a href="#" target="_blank" class="fa fa-facebook"></a> <br>
+        <a href="#" target="_blank" class="fa fa-instagram"></a>
+        <a href="#" target="_blank" class="fa fa-whatsapp"></a>
+        <a href="#" target="_blank" class="fa fa-youtube"></a>
+    </div>
+
+
+
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+
+        var noOfImages = document.getElementsByClassName("swiper-slide")
+        if (noOfImages.length > 1) {
+            var mySwiper = new Swiper('.swiper-container', {
+
+                // Optional parameters
+                loop: true,
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            })
+        } else {
+            document.getElementById("prev-arrow").style.display = "none"
+            document.getElementById("next-arrow").style.display = "none"
+        }
+    </script>
+</body>
+
+</html>
